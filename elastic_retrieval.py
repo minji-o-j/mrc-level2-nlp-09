@@ -62,7 +62,7 @@ def search_es(es, index_name, question_text, topk, tagged):
 class SparseRetrieval:
     def __init__(self) -> NoReturn:
 
-        # run_elastic_search.py를 먼저 실행시켜야합니다. 처음 한 번이면 될 것입니다!
+        # elastic_setting.py를 먼저 실행시켜야합니다. 처음 한 번이면 될 것!
         self.es, self.index_name = elastic_setting(index_name="origin-wiki-index")
 
         # 삽입된 문서 1개 확인(es 결과 확인)
