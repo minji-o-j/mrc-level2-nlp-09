@@ -39,7 +39,7 @@ def search_es(es, index_name, question_text, topk, tagged):
     query = {
         "query": {
             "bool": {
-                "must": [{"match": {"document_text": question_text}}],
+                "must": [{"match": {"document_text": question_text}}], # question에 있는 토큰 중 하나 이상이 문서에 있어야함
                 "should": [
                     {
                         "match": {
